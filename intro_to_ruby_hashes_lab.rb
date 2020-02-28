@@ -24,10 +24,10 @@ end
 
 def update_counting_hash(hash, key)
   value = 1 
- hash.update(hash) { |key , value| value }
+  hash.update(hash) { |key , value| value }
  
- if shipping_manifest["top hat"]
-  shipping_manifest["top hat"] += 1
+ if hash[key]
+    hash[key] += 1
 else
   shipping_manifest["top hat"] = 1
 end
