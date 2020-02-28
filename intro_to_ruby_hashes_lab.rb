@@ -25,7 +25,10 @@ end
 def update_counting_hash(hash, key)
   value = 1
   
-  
+  if hash[key]
+     hash[key] += value
+  else
+    hash[key] = value
+  end 
     hash.update(hash) { |key, value| value + 1}
-
 end
