@@ -23,10 +23,10 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  
+  value = 1
   if hash[key]
-    hash[key] += {key => 1}
+    hash[key] += {key => value
   else
-    hash[key] = {key => 1}
+    hash[key] = {key => value}
   end 
 end
