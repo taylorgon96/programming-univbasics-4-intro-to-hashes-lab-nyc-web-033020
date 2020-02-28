@@ -23,11 +23,6 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  value = 1
-  if hash[key]
-    hash[key] += value
-  else
-    hash[key] = value
-    h1.merge!(h2) { |key, v1, v2| v1 }
+    hash.update(hash) { |key, v1, v2| v1 }
   end 
 end
