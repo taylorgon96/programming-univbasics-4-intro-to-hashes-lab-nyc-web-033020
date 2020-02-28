@@ -24,7 +24,7 @@ end
 
 def update_counting_hash(hash, key)
 
-  hash.update(hash) { |key , value| value }
+  hash.update(hash) { |key , 1 | value }
  
  if hash[key]
     hash[key] += 1
